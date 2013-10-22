@@ -1,0 +1,160 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,600,700);
+@import "/theme/Workstation/less/mixins.less";
+
+
+@font-face {
+  font-family: 'fontello';
+  src: url('/theme/Workstation/fonts/fontello.eot?68732060');
+  src: url('/theme/Workstation/fonts/fontello.eot?68732060#iefix') format('embedded-opentype'),
+       url('/theme/Workstation/fonts/fontello.woff?68732060') format('woff'),
+       url('/theme/Workstation/fonts/fontello.ttf?68732060') format('truetype'),
+       url('/theme/Workstation/fonts/fontello.svg?68732060#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?68732060#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="fontello-"]:before, [class*=" fontello-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.fontello-left-circled:before { content: '\e806'; } /* '���' */
+.fontello-right-circled:before { content: '\e807'; } /* '���' */
+.fontello-twitter:before { content: '\e800'; } /* '���' */
+.fontello-facebook:before { content: '\e801'; } /* '���' */
+.fontello-gplus:before { content: '\e803'; } /* '���' */
+.fontello-pinterest:before { content: '\e804'; } /* '���' */
+.fontello-linkedin:before { content: '\e805'; } /* '���' */
+.fontello-behance:before { content: '\e802'; } /* '���' */
+
+
+
+@primaryColor: #faaf31;
+@white: #FFFFFF;
+
+body { font-family: 'Open Sans', sans-serif; font-size: 13px; }
+a { outline: 0 !important; }
+input, button, select, textarea { font-family: 'Open Sans', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', sans-serif; font-weight: 700; }
+
+
+*, a:focus { outline: none !important; }
+button:focus { outline: none !important; }
+button::-moz-focus-inner { border: 0; }
+
+li.center,
+.center { text-align: center; }
+.right { text-align: right; }
+
+.navbar.main{
+
+    background: #2d2d2d;
+    border-bottom: 2px solid #faaf31 !important;
+    height: 88px;
+    line-height: 88px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1); 
+    margin: 0;
+    position: relative;
+    .topmenu{
+       color:@primaryColor;
+       padding-top:27px;
+       li{
+            margin-left:48px;
+            > a{
+                font-family: 'Open Sans', sans-serif; font-size: 14px;
+                color:@primaryColor;
+                &:hover, &:active,&:focus { 
+                    background:none transparent;
+                }
+            }
+       }
+    }
+    .navbar-toggle{ 
+        border-color:@primaryColor;
+        .icon-bar{
+            background:@primaryColor;
+        }
+    }
+    .rounded()
+}
+
+.footer{
+    background:#2d2d2d;
+    margin-top:20px;
+    
+    .footer_info{
+        padding:10px 0;
+        border-bottom:1px solid #161616;
+        .footer_logotipo{
+            padding-top:5px;
+        }
+        .social{
+            margin-top:0px;
+            margin-bottom:0px;
+            li{
+                float:left;
+                margin-left:11px;
+                a{
+                    color:@primaryColor;
+                    font-size:21px;
+                }
+            }
+        }
+    }
+    .footer_blocks{
+        border-top:1px solid #4e4e4e;
+        padding:22px 0;
+        .address{
+            color:@white;
+        }
+    }
+}
+.body_end{
+    background:#3d3d3d;
+    padding:5px 0;
+    color:@white;
+}
+
+.slider{
+    height:458px;
+    background: url(/theme/Workstation/img/slide/first.jpg) center no-repeat;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2); 
+}

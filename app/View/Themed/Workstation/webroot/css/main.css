@@ -1,0 +1,22 @@
+/* 
+    Document   : main
+    Created on : 9/out/2013, 1:13:45
+    Author     : dahthing
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+.main{
+    background: #2d2d2d;
+    border-bottom: 2px solid #faaf31 !important;
+    height: 88px;
+    line-height: 88px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1); 
+    margin: 0;
+    position: relative;
+    border-radius: 0px;
+}
